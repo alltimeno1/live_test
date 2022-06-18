@@ -2,7 +2,7 @@ const socket = io()
 
 /* 접속 되었을 때 실행 */
 socket.on('connect', function () {
-  const name = prompt('Hello', '')
+  let name = prompt('안녕하세요, 이름을 알려주세요!', '')
 
   if (!name) {
     name = '익명'
@@ -19,6 +19,12 @@ socket.on('update', (data) => {
   msg.innerText = `${data.name}: ${data.message}`
   box.appendChild(msg)
 })
+
+function enterKey() {
+  if (window.event.keyCode === 13) {
+    send()
+  }
+}
 
 /* 전송 함수 */
 function send() {

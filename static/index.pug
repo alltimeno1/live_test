@@ -8,7 +8,7 @@ html
     script(src="/static/index.js")
   body
     #main
-      input#chat(type="text")
+      input#chat(onkeyup="enterKey()" type="text")
       button(onclick="send()") 전송
     #box 
     
