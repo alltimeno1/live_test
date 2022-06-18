@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title 채팅
+    link(rel="stylesheet", href="/static/index.css")
+    script(src="/socket.io/socket.io.js")
+    script(src="/static/index.js")
+  body
+    #main
+      input#chat(type="text")
+      button(onclick="send()") 전송
+    #box 
+    
